@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+$path = __DIR__ . '/config/main-local.php';
+if (!file_exists($path)) {
+    file_put_contents($path, "<?php\n\nreturn [];\n");
+    echo "File created: $path\n";
+};
